@@ -5,7 +5,7 @@ Finger Tablet turns your Android phone into a pen display for your Windows PC: y
 - the **Finger Tablet** app on your phone, from Google Play
 - this **companion** on your PC
 
-This page is for testers of the Google Play test (version 2.1.0).
+This page is for testers of the Google Play test (version 2.1.4).
 
 ## What you need
 
@@ -23,7 +23,7 @@ Do you have an older Finger Tablet that didn't come from Google Play? Uninstall 
 
 ## 2. Get the companion
 
-1. Under **Releases** on this page, open the newest one and download `FingerTablet-Companion-2.1.0-win-x64.zip`.
+1. Under **Releases** on this page, open the newest one and download `FingerTablet-Companion-2.1.4-win-x64.zip`.
 2. Unzip it anywhere, for example into your Documents folder.
 3. Open the `FingerTablet-Companion` folder and run `FingerTablet.Companion.exe`. Nothing to install.
 
@@ -33,12 +33,17 @@ On its first start, the companion lists the drawing programs it found (Blender, 
 
 ## 3. Connect
 
-1. **Turn on USB debugging on the phone:** Settings › Developer options › USB debugging. No Developer options? Go to Settings › About phone (on Samsung: About phone › Software information) and tap **Build number** 7 times, then go back. Finger Tablet's own settings, under CONNECTION, open these screens for you.
-2. Plug the phone into the PC with the USB cable.
-3. The phone asks **"Allow USB debugging?"**: tick **Always allow from this computer** and tap **Allow**.
-4. Open Finger Tablet on the phone. It connects within a few seconds.
+1. Plug the phone into the PC with the USB cable.
+2. **Turn on USB tethering on the phone:** Settings › Network & internet › Hotspot & tethering › **USB tethering** (on Samsung: Settings › Connections › Mobile Hotspot and Tethering › **USB tethering**). Finger Tablet's own settings, under CONNECTION, open this screen for you. No Developer options needed.
+3. Open Finger Tablet on the phone. The first time, it asks **"Allow ‹your PC› to connect?"**: tap **Allow**. It connects within a few seconds.
 
-Stuck? **How do I connect?** in the companion's window walks through it, including the USB driver some phones need.
+While USB tethering is on, Windows may use the phone's mobile data for the internet. To keep that in check, set the phone's connection as metered: Windows Settings › Network & Internet › the phone's connection (Ethernet) › **Metered connection**.
+
+**Or use USB debugging, the fallback:** Settings › Developer options › USB debugging (no Developer options? Settings › About phone, on Samsung About phone › Software information, and tap **Build number** 7 times). When the phone asks **"Allow USB debugging?"**, tick **Always allow from this computer** and tap **Allow**.
+
+USB tethering is the main way: whenever it is on, the companion connects over it, even if USB debugging is on too (no need to turn USB debugging off). USB debugging is only used when USB tethering is off or can't be used. With both on, the phone may still ask "Allow USB debugging?": allowing it is fine and keeps the fallback ready.
+
+Stuck? **How do I connect?** in the companion's window walks through it, including the USB driver some phones need for USB debugging.
 
 ## Updating and removing
 
@@ -55,7 +60,7 @@ See the [privacy policy](PRIVACY.md). In short: nothing you draw leaves your PC 
 
 ## Checking the download (optional)
 
-`SHA256SUMS.txt` holds the zip's checksum. In PowerShell: `Get-FileHash FingerTablet-Companion-2.1.0-win-x64.zip` should print the same value, in capitals.
+`SHA256SUMS.txt` holds the zip's checksum. In PowerShell: `Get-FileHash FingerTablet-Companion-2.1.4-win-x64.zip` should print the same value, in capitals.
 
 ---
 
