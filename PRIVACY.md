@@ -45,7 +45,7 @@ Both apps have a Send feedback form. Nothing is sent until you press Send. Then 
 
 ## Downloads
 
-The phone app comes from Google Play, and the companion from GitHub. Their own privacy policies cover those downloads.
+The phone app comes from Google Play, and the companion from Google Drive. Google's own privacy policy covers those downloads.
 
 ## Children
 
